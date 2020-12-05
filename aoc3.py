@@ -1,7 +1,7 @@
 from operator import mul
 from functools import reduce
 
-map_arr = open('ao3.txt').read().splitlines()
+map_arr = open('aoc3.txt').read().splitlines()
 # part 1
 t = 0
 for r in range(1, len(map_arr)):

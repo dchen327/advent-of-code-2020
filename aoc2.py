@@ -1,5 +1,5 @@
 # part 1
-f = 'ao2.txt'
+f = 'aoc2.txt'
 num_valid = 0
 for line in open(f).read().splitlines():
     policy, pw = line.split(': ')
