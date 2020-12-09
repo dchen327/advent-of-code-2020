@@ -1,6 +1,6 @@
 nums = open('aoc9.txt').read().splitlines()
 nums = list(map(int, nums))
-preamble_len = 5
+preamble_len = 25
 for start_idx in range(len(nums) - preamble_len):
     a = nums[start_idx:start_idx + preamble_len]
     next_num = nums[start_idx + preamble_len]
