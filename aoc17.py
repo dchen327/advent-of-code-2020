@@ -2,7 +2,7 @@ import numpy as np
 from itertools import product
 
 init_state = open('aoc17.txt').read().splitlines()
-grid_size = 30
+grid_size = 25
 offset = grid_size // 2 - len(init_state) // 2
 grid = np.zeros((grid_size, grid_size, grid_size))
 for r in range(len(init_state)):
