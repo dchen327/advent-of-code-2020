@@ -7,9 +7,10 @@ nearby_tickets = [list(map(int, t.split(','))) for t in nearby_tickets]
 rules_formatted = []
 for rule in rules:
     rule = rule[rule.index(':')+2:]
-    p1, p2 = rule.split(' or ')
-    rules_formatted.append(p1)
-    rules_formatted.append(p2)
+    # p1, p2 = rule.split(' or ')
+    # rules_formatted.append(p1)
+    # rules_formatted.append(p2)
+    rules_formatted.append(rule)
 
 
 def check_rule(rule, num):
