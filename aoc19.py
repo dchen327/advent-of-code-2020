@@ -8,18 +8,21 @@ valid = [rules['0']]
 final = []
 while valid:
     s = valid.pop(0)
-    if all(c in 'ab ' for c in s):  # done
-        final.append(s)
+    # if all(c in 'ab ' for c in s):  # done
+    #     final.append(s)
+    # else:
+    s = s.split()
+    for i, num in enumerate(s):
+        if num not in 'ab':
+            for rule in rules[num].split(' | '):
+                prev = s[i]
+                s[i] = rule
+                valid.append(' '.join(s))
+                changed = True
+                s[i] = prev
+            break
     else:
-        s = s.split()
-        for i, num in enumerate(s):
-            if num not in 'ab':
-                for rule in rules[num].split(' | '):
-                    prev = s[i]
-                    s[i] = rule
-                    valid.append(' '.join(s))
-                    changed = True
-                    s[i] = prev
-                break
+        final.append(' '.join(s))
+    print(len(valid))
 
 print(final)
